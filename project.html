@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project — Details</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="project-page">
+
+  <div class="project-container">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+      <!-- Back link: project.js intercepts this and uses history.back or fallback to index.html#scroll=... -->
+      <a href="index.html" id="back-link" class="muted" title="Back to portfolio">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        <span class="sr-only">Back</span>
+      </a>
+      <div class="muted">Project details</div>
+    </div>
+
+    <div class="project-card-top" id="project-top-card">
+      <div class="project-image" id="project-image">
+        <img src="" alt="Project image" id="main-project-img">
+      </div>
+
+      <div class="meta-column" aria-label="Project meta">
+        <div class="meta-header">
+          <div class="title-group">
+            <h1 id="project-title" class="project-title">Project Title</h1>
+            <div id="project-dev" class="project-dev">By Developer Name</div>
+          </div>
+
+          <div class="stats-row" role="group" aria-label="project stats">
+            <div class="stat" title="Rating">
+              <div class="big"><i class="fas fa-star" style="color:#ffcf58" aria-hidden="true"></i> <span id="project-rating">4.8</span></div>
+              <div class="muted" id="project-reviews">1.2K reviews</div>
+            </div>
+            <div class="divider-vert" aria-hidden="true"></div>
+            <div class="stat" title="Size">
+              <div class="big"><i class="fas fa-download" aria-hidden="true"></i> <span id="project-size">--</span></div>
+              <div class="muted" id="project-installs">Open</div>
+            </div>
+            <div class="divider-vert" aria-hidden="true"></div>
+            <div class="stat" title="Age rating">
+              <div class="big"><span id="project-age">3+</span></div>
+              <div class="muted" id="project-category">Web</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <div class="install-wrap" role="group" aria-label="Install actions">
+            <button id="install-btn" class="install-btn" aria-label="Open repository">
+              <i class="fab fa-github" style="opacity:0.9" aria-hidden="true"></i>
+              <span id="install-label">Open repository</span>
+            </button>
+
+            <!-- New raw link button -->
+            <button id="raw-btn" class="raw-btn" aria-label="Open raw link" title="Open raw link (zip / raw files / demo)">
+              <i class="fas fa-link" aria-hidden="true"></i>
+              <span id="raw-label">Open raw link</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="install-note" class="install-note"></div>
+      </div>
+    </div>
+
+    <div class="screenshot-card" id="screenshot-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div style="font-weight:700; color:#fff;">Screenshots</div>
+        <div class="muted" style="font-size:0.9rem;"></div>
+      </div>
+
+      <button class="carousel-arrow left" id="carousel-prev" aria-label="Previous screenshot" title="Previous">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button class="carousel-arrow right" id="carousel-next" aria-label="Next screenshot" title="Next">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
+
+      <div class="screenshot-strip" id="screenshot-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Project screenshots"></div>
+    </div>
+
+    <div class="about-card" id="about-card">
+      <h3>About this project</h3>
+      <p id="project-desc" style="margin:0; color:var(--muted);">BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLAAAA!!!</p>
+
+      <div class="chip-row" id="project-tags-container" style="margin-top:12px;"></div>
+    </div>
+
+    <div class="comments-card" id="comments-card">
+      <h3 style="margin:0; color:var(--neon-purple); font-family:var(--font-head);">Comments</h3>
+
+      <form id="comment-form" class="comment-form" onsubmit="return false;" aria-label="Leave a comment">
+        <div class="comment-avatar" aria-hidden="true">✦</div>
+        <div class="comment-controls">
+          <div class="comment-row">
+            <div style="flex:1"></div>
+            <div class="rating-widget" id="rating-widget" role="radiogroup" aria-label="Rating">
+              <button type="button" class="star-btn" data-value="1" aria-label="1 star"><i class="far fa-star" aria-hidden="true"></i></button>
+              <button type="button" class="star-btn" data-value="2" aria-label="2 stars"><i class="far fa-star" aria-hidden="true"></i></button>
+              <button type="button" class="star-btn" data-value="3" aria-label="3 stars"><i class="far fa-star" aria-hidden="true"></i></button>
+              <button type="button" class="star-btn" data-value="4" aria-label="4 stars"><i class="far fa-star" aria-hidden="true"></i></button>
+              <button type="button" class="star-btn" data-value="5" aria-label="5 stars"><i class="far fa-star" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <div class="floating-input" style="width:100%;">
+            <input id="comment-name" type="text" placeholder=" " maxlength="60" required aria-label="Your name" />
+            <label for="comment-name">Your name</label>
+          </div>
+
+          <textarea id="comment-text" class="comment-textarea" placeholder="Write your comment..." maxlength="1000" required aria-label="Comment text"></textarea>
+
+          <div class="comment-actions">
+            <div class="char-counter" id="char-counter">0 / 1000</div>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <div id="comment-note" class="muted" style="font-size:0.85rem;"></div>
+              <button id="send-comment" class="send-btn" aria-label="Send comment" disabled>Send</button>
+            </div>
+          </div>
+
+          <div class="comment-preview" id="comment-preview" aria-live="polite" style="display:none;">
+            <div style="font-weight:700; margin-bottom:6px;" id="preview-name"></div>
+            <div id="preview-text" style="color:var(--muted);"></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="comments-list" id="comments-list" aria-live="polite" style="margin-top:12px;"></div>
+      <div style="display:flex; justify-content:center;">
+        <button id="see-toggle" class="see-more" style="display:none;">See more</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Screenshot viewer">
+    <div class="lightbox-inner" id="lightbox-inner">
+      <button class="lb-close" id="lb-close" aria-label="Close (Esc)"><i class="fas fa-times" aria-hidden="true"></i></button>
+      <button class="lb-prev" id="lb-prev" aria-label="Previous"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+      <img id="lb-image" src="" alt="Screenshot full view">
+      <button class="lb-next" id="lb-next" aria-label="Next"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <!-- Firebase client module (loads analytics/auth/firestore helpers).
+       Include BEFORE project.js so project.js can use window.firebaseClient if needed. -->
+  <script type="module" src="firebase-client.js"></script>
+
+  <script src="project.js"></script>
+</body>
+</html>

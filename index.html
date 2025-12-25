@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#000510">
+    <title>Kirby H. Paladan | Creative Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+      .content-wrapper { pointer-events: auto !important; }
+      /* Prevent white flash on load */
+      body { background-color: #000510; }
+    </style>
+</head>
+<body>
+
+    <canvas id="bg-canvas" style="will-change: transform;"></canvas>
+
+    <nav class="nav glass-nav">
+        <div class="left-nav">
+            <div class="logo">KHP<span class="dot">.</span>DEV</div>
+        </div>
+
+        <div class="nav-right">
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active" data-target="home">/HOME</a>
+                <a href="#about" class="nav-link" data-target="about">/ABOUT</a>
+                <a href="#skills" class="nav-link" data-target="skills">/SKILLS</a>
+                <a href="#experience" class="nav-link" data-target="experience">/EXP</a>
+                <a href="#projects" class="nav-link" data-target="projects">/PROJECTS</a>
+                <a href="#certificates" class="nav-link" data-target="certificates">/CERTS</a>
+                <a href="#contact" class="nav-link" data-target="contact">/CONTACT</a>
+            </div>
+
+            <div class="nav-right-controls">
+                <div class="mobile-toggle" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+
+        <section id="home" class="panel active">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch">
+                        <span id="typed-name"></span><span class="cursor" id="cursor-name">|</span>
+                    </h1>
+                </div>
+
+                <h2 class="console-text">
+                    <span id="typed-subtitle"></span><span class="cursor hidden" id="cursor-subtitle">|</span>
+                </h2>
+
+                <p class="hero-desc">
+                    <span class="accent">| </span> <span id="typed-loop"></span><span class="cursor hidden" id="cursor-loop">|</span>
+                </p>
+
+                <div class="cta-group">
+                    <button class="neon-btn primary" data-target="projects">VIEW PROJECTS</button>
+                    <button class="neon-btn secondary" data-target="contact">CONTACT ME</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="panel hidden">
+            <div class="glass-panel large">
+                <h2 class="section-title">PROFILE</h2>
+                <div class="about-grid">
+                    <div class="profile-visual">
+                        <img src="https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png" alt="Kirby Paladan" class="profile-img">
+                    </div>
+                    <div class="profile-data">
+                        <h3>About Me</h3>
+                        <p>I am a 1st Year BSCS Student at <strong>Partido State University (Main)</strong>. I specialize in bridging the gap between high-performance software engineering and creative 3D interactive web design.</p>
+                        <div class="education-box">
+                            <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                            <p><strong>Bachelor of Science in Computer Science</strong></p>
+                            <p>Partido State University (Main) | 2025 - 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="panel hidden">
+            <div class="glass-panel large">
+                <h2 class="section-title">SKILL_METRICS</h2>
+                <div class="skills-columns" aria-label="Skills">
+                    <div class="skills-column" id="technical-skills" aria-labelledby="technical-heading">
+                        <h3 id="technical-heading" class="skills-subtitle">Technical Skills</h3>
+                        <p class="skills-desc">Core technologies, tools and programming skills I use to build projects.</p>
+
+                        <div class="skills-container">
+                            <div class="skill-item"><span>C++</span><div class="progress-bar"><div class="fill" style="width: 50%"></div></div></div>
+                            <div class="skill-item"><span>Three.js / WebGL</span><div class="progress-bar"><div class="fill" style="width: 40%"></div></div></div>
+                            <div class="skill-item"><span>HTML</span><div class="progress-bar"><div class="fill" style="width: 60%"></div></div></div>
+                            <div class="skill-item"><span>CSS</span><div class="progress-bar"><div class="fill" style="width: 80%"></div></div></div>
+                            <div class="skill-item"><span>JavaScript</span><div class="progress-bar"><div class="fill" style="width: 40%"></div></div></div>
+                            <div class="skill-item"><span>Data Analytics (with AI)</span><div class="progress-bar"><div class="fill" style="width: 70%"></div></div></div>
+                            <div class="skill-item"><span>Prompt Engineering</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                            <div class="skill-item"><span>Web Development</span><div class="progress-bar"><div class="fill" style="width: 70%"></div></div></div>
+                            <div class="skill-item"><span>Game Development</span><div class="progress-bar"><div class="fill" style="width: 50%"></div></div></div>
+                            <div class="skill-item"><span>Algorithms</span><div class="progress-bar"><div class="fill" style="width: 50%"></div></div></div>
+                            <div class="skill-item"><span>Data Structures</span><div class="progress-bar"><div class="fill" style="width: 60%"></div></div></div>
+                            <div class="skill-item"><span>Debugging</span><div class="progress-bar"><div class="fill" style="width: 80%"></div></div></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-column" id="soft-skills" aria-labelledby="soft-heading">
+                        <h3 id="soft-heading" class="skills-subtitle">Soft Skills</h3>
+                        <p class="skills-desc">Personal and team skills that help me deliver projects and work effectively with others.</p>
+
+                        <div class="skills-container">
+                            <div class="skill-item"><span>Multitasking</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                            <div class="skill-item"><span>Fast Learner</span><div class="progress-bar"><div class="fill" style="width: 80%"></div></div></div>
+                            <div class="skill-item"><span>Teamwork</span><div class="progress-bar"><div class="fill" style="width: 95%"></div></div></div>
+                            <div class="skill-item"><span>Hard Working</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                            <div class="skill-item"><span>Dedicated</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                            <div class="skill-item"><span>Consistent</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                            <div class="skill-item"><span>Problem Solving</span><div class="progress-bar"><div class="fill" style="width: 70%"></div></div></div>
+                            <div class="skill-item"><span>Time Management</span><div class="progress-bar"><div class="fill" style="width: 95%"></div></div></div>
+                            <div class="skill-item"><span>Communication</span><div class="progress-bar"><div class="fill" style="width: 60%"></div></div></div>
+                            <div class="skill-item"><span>Adaptability</span><div class="progress-bar"><div class="fill" style="width: 95%"></div></div></div>
+                            <div class="skill-item"><span>Critical Thinking</span><div class="progress-bar"><div class="fill" style="width: 95%"></div></div></div>
+                            <div class="skill-item"><span>Creativity</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                            <div class="skill-item"><span>Learning Agility</span><div class="progress-bar"><div class="fill" style="width: 95%"></div></div></div>
+                            <div class="skill-item"><span>Curiosity</span><div class="progress-bar"><div class="fill" style="width: 100%"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="panel hidden">
+            <div class="container-width">
+                <h2 class="section-title">WORK_LOGS</h2>
+                <div class="experience-grid">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h3>AI Projects Developer</h3>
+                                <span class="company">Freelancer/Self-Employed</span>
+                                <span class="date">Mar 2024 — Present</span>
+                                <div class="hint"><i class="fas fa-sync"></i> Flip</div>
+                            </div>
+                            <div class="flip-back">
+                                <h3>Details</h3>
+                                <ul>
+                                    <li>Led AI-driven analytics projects.</li>
+                                    <li>Built production data pipelines.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h3>Freelance Web Developer</h3>
+                                <span class="company">Freelancer/Self-Employed</span>
+                                <span class="date">Jun 2023 — Feb 2024</span>
+                                <div class="hint"><i class="fas fa-sync"></i> Flip</div>
+                            </div>
+                            <div class="flip-back">
+                                <h3>Details</h3>
+                                <ul>
+                                    <li>Implemented responsive front-ends.</li>
+                                    <li>Created data visualizations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h3>Game Development Enthusiast</h3>
+                                <span class="company">Freelancer/Self-Employed</span>
+                                <span class="date">Dec 2025 — Present</span>
+                                <div class="hint"><i class="fas fa-sync"></i> Flip</div>
+                            </div>
+                            <div class="flip-back">
+                                <h3>Details</h3>
+                                <ul>
+                                    <li>3d Game Development.</li>
+                                    <li>Realistic Graphics</li>
+                                     <li>Real-life Physics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h3>UI/UX Designer</h3>
+                                <span class="company">Freelancer/Self-Employed</span>
+                                <span class="date">Sep 2025 — Present</span>
+                                <div class="hint"><i class="fas fa-sync"></i> Flip</div>
+                            </div>
+                            <div class="flip-back">
+                                <h3>Details</h3>
+                                <ul>
+                                    <li>Smooth UI Animations</li>
+                                    <li>Responsive Animations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="panel hidden">
+            <div class="container-width">
+                <h2 class="section-title">PROJECTS</h2>
+
+                <div class="project-category">
+                    <h3 class="section-title" style="font-size:1.2rem; margin-top:0.6rem;">Games</h3>
+                    <div class="projects-grid">
+                        <a class="project-card"
+                           href="project.html?title=3D%20Poly%20Forest&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="3D Poly Forest"
+                           data-desc="Real-life physics simulation.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>3D Poly Forest</h3>
+                            <div class="tags"><span>JavaScript</span><span>WebGL</span><span>Three.js</span><span>Engine</span></div>
+                            <p>Real-life physics simulation.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-category">
+                    <h3 class="section-title" style="font-size:1.2rem; margin-top:0.6rem;">Websites</h3>
+                    <div class="projects-grid">
+                        <a class="project-card"
+                           href="project.html?title=Level10GC%20Replica&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Level10GC Replica"
+                           data-desc="Construction company site.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>Level10GC Replica</h3>
+                            <div class="tags"><span>Optimization</span><span>UI/UX</span></div>
+                            <p>Construction company site.</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=Aureum%20Bank&image
+                           =https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Aureum-Bank"
+                           data-desc="Secure ATM simulation / website.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>Aureum Bank</h3>
+                            <div class="tags"><span>Security</span><span>Simulation</span><span>HTML/CSS/JS</span></div>
+                            <p>Secure ATM simulation.</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=Wordify&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Wordify"
+                           data-desc="Accurate Word counting.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>WORDIFY</h3>
+                            <div class="tags"><span>Accuracy</span><span>HTML/CSS/JS</span></div>
+                            <p>Accurate Word counting</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=Payflow&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Payflow"
+                           data-desc="Fast Transaction System.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>PAYFLOW</h3>
+                            <div class="tags"><span>Security</span><span>Accuracy</span><span>HTML/CSS/JS</span></div>
+                            <p>Digital Cashier Simulation</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=Moneymap&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Moneymap"
+                           data-desc="Accurate Finance Tracking.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>MONEYMAP</h3>
+                            <div class="tags"><span>Robust</span><span>Accuracy</span><span>HTML/CSS/JS</span></div>
+                            <p>Finance Tracking</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=Fuelog&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Fuellog"
+                           data-desc="Robust tracking system.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>FUELOG</h3>
+                            <div class="tags"><span>Robustness</span><span>Accessibility</span><span>HTML/CSS/JS</span></div>
+                            <p>Secure ATM simulation.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-category">
+                    <h3 class="section-title" style="font-size:1.2rem; margin-top:0.6rem;">C++ / Console Projects</h3>
+                    <div class="projects-grid">
+                        <a class="project-card"
+                           href="project.html?title=Wordify-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Wordify-C++"
+                           data-desc="Text analysis tool (console).">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>WORDIFY-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Text analysis tool (console).</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=PAYFLOW-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Payflow-C++"
+                           data-desc="Production Management.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>PAYFLOW-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Digital Cashier Simulation On C++ </p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=MONEYMAP-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="MONEYMAP-C++"
+                           data-desc="Efficient finance tool.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>MONEYMAP-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Finance Tracking System On C++</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=FUELOG-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="FUELOG-C++"
+                           data-desc="Efficient consumption tool.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>FUELOG-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Efficient</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=CLASSMATE-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="CLASAMATE C++"
+                           data-desc="Student Management.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>CLASSMATE-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Student Data Management</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=AUREUM-BANK-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="AUREUM BANK C++"
+                           data-desc="Security system.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>AUREUM-BANK-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Security</p>
+                        </a>
+
+                        <a class="project-card"
+                           href="project.html?title=GRADEFLOW-C++&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Grade Converter"
+                           data-desc="Grade Conversion Tool.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>GRADEFLOW-C++</h3>
+                            <div class="tags"><span>Tool</span><span>C++</span><span>Console</span></div>
+                            <p>Grade Conversion</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-category">
+                    <h3 class="section-title" style="font-size:1.2rem; margin-top:0.6rem;">Python / Console Projects</h3>
+                    <div class="projects-grid">
+                        <a class="project-card"
+                           href="project.html?title=PYTHOS-AI&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Ai Assistant"
+                           data-desc="Tool Assistant.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>PYTHOS-AI</h3>
+                            <div class="tags"><span>Tool</span><span>Python</span><span>API</span></div>
+                            <p>Tool Assistant</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-category">
+                    <h3 class="section-title" style="font-size:1.2rem; margin-top:0.6rem;">Applications & Utilities</h3>
+                    <div class="projects-grid">
+                        <a class="project-card"
+                           href="project.html?title=FUCKYOU&image=https://i.ibb.co/vvvxtdTb/1000093900-removebg-preview.png&dev=KIRBY%20H.%20PALADAN"
+                           target="_self"
+                           data-title="Sample"
+                           data-desc="Business logic simulator.">
+                            <span class="project-open-icon"><i class="fas fa-external-link-alt"></i></span>
+                            <h3>SAMPLE</h3>
+                            <div class="tags"><span>Retail</span><span>Logic</span></div>
+                            <p>Business logic simulator.</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="certificates" class="panel hidden">
+            <h2 class="section-title">CREDENTIALS</h2>
+            <div class="cert-grid">
+                <div class="cert-card"><img src="https://i.ibb.co/svdnnT9k/Introduction-to-C-certificate.jpg" alt="C++ Certificate"><div class="overlay">C++</div></div>
+                <div class="cert-card"><img src="https://i.ibb.co/LDr2RN2w/Introduction-to-HTML-certificate.jpg" alt="HTML Certificate"><div class="overlay">HTML</div></div>
+                <div class="cert-card"><img src="https://i.ibb.co/xKSfx68f/AI-Powered-A-B-Testing-certificate.jpg" alt="AI A/B Testing Certificate"><div class="overlay">AI A/B Testing</div></div>
+                <div class="cert-card"><img src="https://i.ibb.co/tPcNkjmD/Data-Analytics-with-AI-certificate.jpg" alt="Data Analytics Certificate"><div class="overlay">Data Analytics</div></div>
+                <div class="cert-card"><img src="https://i.ibb.co/TxH9Wxqd/Prompt-Engineering-certificate.jpg" alt="Prompt Engineering Certificate"><div class="overlay">Prompt Eng.</div></div>
+                <div class="cert-card"><img src="https://raw.githubusercontent.com/kirbypaladan24-lgtm/Images-/fa0562e0b393337d4802e3c23c74d75117790064/Visualize%20Your%20Data_certificate.jpg" alt="Data Visualization Certificate"><div class="overlay">Data Viz</div></div>
+                <div class="cert-card"><img src="https://i.ibb.co/gLMWmC3j/Vibe-Coding-certificate.jpg" alt="Vibe Coding Certificate"><div class="overlay">Vibe Coding</div></div>
+                <div class="cert-card"><img src="https://i.ibb.co/4pQ9yW7/Certificate-8.jpg" alt="Certificate 8"><div class="overlay">Certificate 8</div></div>
+            </div>
+        </section>
+
+        <section id="contact" class="panel hidden">
+            <div class="glass-panel small">
+                <h2 class="section-title">UPLINK</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit" class="neon-btn primary">TRANSMIT</button>
+                </form>
+                <div class="contact-info">
+                    <p>kirbypaladan24@gmail.com</p>
+                    <p>+63-9078-1731-93</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cert-modal" class="cert-modal" aria-hidden="true" role="dialog" aria-label="Certificate full view">
+        <div class="cert-modal-inner" role="document">
+            <img id="cert-modal-img" src="" alt="Certificate full view">
+            <div id="cert-modal-caption" class="cert-modal-caption"></div>
+        </div>
+        <button id="cert-modal-close" class="cert-modal-close" aria-label="Close (X)"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog" aria-label="Project details">
+        <div class="project-modal-inner" role="document">
+            <button id="project-modal-back" class="cert-modal-back" aria-label="Back"><i class="fas fa-arrow-left"></i> Back</button>
+            <button id="project-modal-close" class="cert-modal-close" aria-label="Close (X)"><i class="fas fa-times"></i></button>
+            <h2 id="project-modal-title" style="margin-top:18px;">Project</h2>
+            <p id="project-modal-desc"></p>
+            <div id="project-modal-links" style="margin-top:8px;"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+
+    <!-- Firebase client module (loads analytics/auth/firestore helpers).
+         Include BEFORE main.js if any code on the main page will use window.firebaseClient. -->
+    <script type="module" src="firebase-client.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
